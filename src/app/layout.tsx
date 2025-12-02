@@ -14,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <GlobalStyle />
-      <body className="antialiased bg-white">
+      <body>
+        <GlobalStyle />
         {children}
       </body>
     </html>

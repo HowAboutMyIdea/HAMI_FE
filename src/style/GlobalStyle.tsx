@@ -3,28 +3,35 @@
 import { Global, css } from "@emotion/react";
 
 const GlobalStyle = () => (
-    <Global
-        styles={css`
+  <Global
+    styles={css`
+      @font-face {
+        font-family: 'KoPubBatang';
+        src: url('https://cdn.jsdelivr.net/npm/kopubfont@1.0/korean/KoPubBatang-Bold.woff2')
+          format('woff2');
+        font-weight: 700;
+        font-style: normal;
+      }
+
       *, *::before, *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'KoPubBatang', serif;
+        font-weight: 700;
       }
 
-      @font-face {
-        font-family: 'KoPubBatang';
-        font-style: normal;
-        font-weight: 500;
-        src: url('/fonts/KoPubBatang-Medium.woff2') format('woff2'),
-            url('/fonts/KoPubBatang-Medium.woff') format('woff');
-    }
-
       html,
-      body,
-      * {
-        font-family: "KoPubBatang", sans-serif;
-        color: #FAFAFA;
-        background-color: #0A0A0A;
+      body {
+        height: 100vh;
+        background:
+          linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+          url("/BG.gif");
+        color: #fafafa;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow-y: hidden;
       }
 
       a {
@@ -55,7 +62,7 @@ const GlobalStyle = () => (
         scrollbar-width: none;
       }
     `}
-    />
+  />
 );
 
 export default GlobalStyle;
