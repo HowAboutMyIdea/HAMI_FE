@@ -8,6 +8,7 @@ export const Contaienr = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -48,4 +49,15 @@ export const SubTitle = styled.button`
   border: none;
   margin-top: 6rem;
   cursor: pointer;
+
+  @keyframes blink {
+    0%, 0%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.85;
+    }
+  }
+
+  animation: blink 1s infinite;
 `;
