@@ -8,7 +8,7 @@ export default function Home() {
             <S.TextGroup>
                 <S.Title>당신의 아이디어를</S.Title>
                 <S.Title>시험해보세요</S.Title>
-                <S.SubTitle>아이디어 시험하러 가기 →</S.SubTitle>
+                <S.SubTitle>화면을 누르면 이동합니다</S.SubTitle>
             </S.TextGroup>
         </S.Contaienr>
     );
