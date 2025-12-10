@@ -53,6 +53,7 @@ export const SubTitle = styled.input`
   border-radius: 4px;
   margin-top: 6rem;
   cursor: pointer;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
 
   &::placeholder {
     color: #9EB09E;
