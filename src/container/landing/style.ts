@@ -6,7 +6,7 @@ export const Contaienr = styled.div`
   background-image: url("/BG.gif");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   position: relative;
   cursor: pointer;
 
@@ -14,7 +14,7 @@ export const Contaienr = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     z-index: 0;
   }
 
