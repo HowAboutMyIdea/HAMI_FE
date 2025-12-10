@@ -9,14 +9,14 @@ export default function Landing() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            router.push('/');
+            router.push('/main');
         }, 3000);
 
         return () => clearTimeout(timer);
     }, [router]);
 
     return (
-        <S.Contaienr onClick={() => router.push('/')}>
+        <S.Contaienr onClick={() => router.push('/main')}>
             <S.TextGroup>
                 <S.Title>당신의 아이디어를</S.Title>
                 <S.Title>시험해보세요</S.Title>
