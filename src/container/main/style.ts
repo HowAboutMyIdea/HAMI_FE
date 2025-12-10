@@ -39,24 +39,28 @@ export const Title = styled.div`
   color: #fafafa;
 `;
 
-export const SubTitle = styled.button`
+export const SubTitle = styled.input`
   display: flex;
-  font-size: 1.25rem;
-  text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60rem;
+  text-shadow: 0 0 10px #008D04, 0 0 40px #008D04;
+  box-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
   color: #9EB09E;
   background-color: transparent;
-  border: none;
+  border: 1px solid #008D04;
+  padding: 1.5rem;
+  border-radius: 4px;
   margin-top: 6rem;
   cursor: pointer;
 
-  @keyframes blink {
-    0%, 35%, 100% {
-      opacity: 1;
-    }
-    5%, 75% {
-      opacity: 0.85;
-    }
+  &::placeholder {
+    color: #9EB09E;
   }
 
-  animation: blink 1s infinite;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 20px #00FF04, 0 0 30px #00FF04;
+    border: 1px solid #00FF04;
+  }
 `;
