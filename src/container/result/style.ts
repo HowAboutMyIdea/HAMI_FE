@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     flex-direction: column;
 `;
@@ -37,7 +37,7 @@ export const TextGroup = styled.div`
     width: 60%;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 `;
 
 export const Title = styled.div`
@@ -58,7 +58,6 @@ export const Value = styled.div`
   font-size: 1.3rem;
   color: #fafafa;
   line-height: 1.5;
-  text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
 `;
 
 export const Button = styled.button`
@@ -76,4 +75,5 @@ export const Button = styled.button`
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 0.75rem;
+  margin-top: 2rem;
 `;

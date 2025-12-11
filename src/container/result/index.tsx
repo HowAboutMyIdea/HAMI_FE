@@ -24,32 +24,22 @@ export default function Result() {
         <S.Container>
             <S.Wrapper>
                 <S.Title>아이디어 분석 결과</S.Title>
-
                 <S.TextGroup>
                     <S.SubTitle>원문 아이디어</S.SubTitle>
                     <S.Value>{originalIdea ?? <em>없음</em>}</S.Value>
                 </S.TextGroup>
-
                 <S.TextGroup>
                     <S.SubTitle>핵심 주제</S.SubTitle>
                     <S.Value>{mainSubject ?? <em>없음</em>}</S.Value>
                 </S.TextGroup>
-
                 <S.TextGroup>
                     <S.SubTitle>키워드</S.SubTitle>
                     <S.Value>
-                        {keywords && keywords.length > 0 ? (
-                            <ul style={{ paddingLeft: '1.25rem', margin: 0 }}>
-                                {keywords.map((k, i) => (
-                                    <li key={i}>{k}</li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <em>없음</em>
-                        )}
+                        {keywords && keywords.length > 0
+                            ? keywords.join(', ')
+                            : <em>없음</em>}
                     </S.Value>
                 </S.TextGroup>
-
                 <S.TextGroup>
                     <S.SubTitle>요약</S.SubTitle>
                     <S.Value>{summary ?? <em>없음</em>}</S.Value>
