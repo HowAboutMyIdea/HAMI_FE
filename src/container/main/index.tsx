@@ -10,7 +10,7 @@ export default function Main() {
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
-            router.push('/');
+            router.push('/result');
         }
     };
 
