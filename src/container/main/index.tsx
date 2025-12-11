@@ -36,21 +36,20 @@ export default function Main() {
         <S.Container>
             <S.TextGroup>
                 <S.Title>아이디어 입력</S.Title>
-                <textarea
+                <S.SubTitle
                     value={idea}
                     onChange={(e) => setIdea(e.target.value)}
                     placeholder="아이디어를 입력하세요"
-                    style={{ width: "100%", minHeight: "8rem", padding: "0.75rem", fontSize: "1rem", boxSizing: "border-box" }}
                 />
                 {error && <div style={{ color: "red", marginTop: "0.5rem" }}>{error}</div>}
-                <div style={{ marginTop: "0.75rem", display: "flex", gap: "0.5rem" }}>
-                    <button onClick={submit} disabled={loading} style={{ padding: "0.5rem 1rem" }}>
+                <S.ButtonGroup>
+                    <S.Button onClick={submit} disabled={loading} style={{ padding: "0.5rem 1rem" }}>
                         {loading ? "분석 중..." : "분석하기"}
-                    </button>
-                    <button onClick={() => setIdea("")} style={{ padding: "0.5rem 1rem" }}>
+                    </S.Button>
+                    <S.Button onClick={() => setIdea("")} style={{ padding: "0.5rem 1rem" }}>
                         초기화
-                    </button>
-                </div>
+                    </S.Button>
+                </S.ButtonGroup>
             </S.TextGroup>
         </S.Container>
     );

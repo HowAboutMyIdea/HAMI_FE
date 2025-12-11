@@ -30,6 +30,7 @@ export const TextGroup = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 3rem;
 `;
 
 export const Title = styled.div`
@@ -51,7 +52,6 @@ export const SubTitle = styled.input`
   border: 1px solid #008D04;
   padding: 1.5rem;
   border-radius: 4px;
-  margin-top: 6rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease, border 0.3s ease;
 
@@ -64,4 +64,21 @@ export const SubTitle = styled.input`
     box-shadow: 0 0 20px #00FF04, 0 0 30px #00FF04;
     border: 1px solid #00FF04;
   }
+`;
+
+export const Button = styled.button`
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fafafa;
+
+  &:hover {
+    background-color: #d5d5d5ff;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.75rem;
 `;
