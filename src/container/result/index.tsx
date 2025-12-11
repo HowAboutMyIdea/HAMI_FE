@@ -41,7 +41,6 @@ export default function Result() {
                 if (Array.isArray(parsed)) setKeywords(parsed.map(String));
                 else setKeywords(null);
             } catch {
-                // if it's a comma-separated string, try split
                 setKeywords(rawKeywords.split(',').map(s => s.trim()).filter(Boolean));
             }
         } else {
@@ -63,34 +62,19 @@ export default function Result() {
 
     return (
         <S.Container>
-            <S.TextGroup>
+            <S.Wrapper>
                 <S.Title>아이디어 분석 결과</S.Title>
-
-                <div style={{ marginTop: '1rem' }}>
-                    <strong style={{ display: 'block', marginBottom: '0.5rem' }}>원문 아이디어</strong>
-                    {originalIdea ? (
-                        <div style={{ padding: '0.75rem', borderRadius: '0.25rem', whiteSpace: 'pre-wrap' }}>
-                            {originalIdea}
-                        </div>
-                    ) : (
-                        <em>전달된 아이디어가 없습니다.</em>
-                    )}
-                </div>
-
-                <div style={{ marginTop: '1rem' }}>
-                    <strong>핵심 주제</strong>
-                    <div style={{ marginTop: '0.5rem' }}>
-                        {mainSubject ? (
-                            <div style={{ padding: '0.5rem', borderRadius: '0.25rem' }}>{mainSubject}</div>
-                        ) : (
-                            <em>없음</em>
-                        )}
-                    </div>
-                </div>
-
-                <div style={{ marginTop: '1rem' }}>
-                    <strong>키워드</strong>
-                    <div style={{ marginTop: '0.5rem' }}>
+                <S.TextGroup>
+                    <S.SubTitle>원문 아이디어</S.SubTitle>
+                    <S.Value>{originalIdea ?? <em>없음</em>}</S.Value>
+                </S.TextGroup>
+                <S.TextGroup>
+                    <S.SubTitle>핵심 주제</S.SubTitle>
+                    <S.Value>{mainSubject ?? <em>없음</em>}</S.Value>
+                </S.TextGroup>
+                <S.TextGroup>
+                    <S.SubTitle>키워드</S.SubTitle>
+                    <S.Value>
                         {keywords && keywords.length > 0 ? (
                             <ul style={{ paddingLeft: '1.25rem', margin: 0 }}>
                                 {keywords.map((k, i) => (
@@ -100,29 +84,25 @@ export default function Result() {
                         ) : (
                             <em>없음</em>
                         )}
-                    </div>
-                </div>
+                    </S.Value>
+                </S.TextGroup>
+                <S.TextGroup>
+                    <S.SubTitle>요약</S.SubTitle>
+                    <S.Value>{summary ?? <em>없음</em>}</S.Value>
+                </S.TextGroup>
 
-                <div style={{ marginTop: '1rem' }}>
-                    <strong>요약</strong>
-                    <div style={{ marginTop: '0.5rem' }}>
-                        {summary ? (
-                            <div style={{ padding: '0.75rem', borderRadius: '0.25rem', whiteSpace: 'pre-wrap' }}>{summary}</div>
-                        ) : (
-                            <em>없음</em>
-                        )}
-                    </div>
-                </div>
-
-                <div style={{ marginTop: '1.25rem', display: 'flex', gap: '0.75rem' }}>
-                    <button onClick={() => router.back()} style={{ padding: '0.5rem 1rem', fontSize: '1rem' }}>
+                <S.ButtonGroup>
+                    <S.Button onClick={() => router.back()}>
                         뒤로
-                    </button>
-                    <button onClick={copyAnalysis} disabled={!(originalIdea || mainSubject || summary || (keywords && keywords.length > 0))} style={{ padding: '0.5rem 1rem', fontSize: '1rem' }}>
+                    </S.Button>
+                    <S.Button
+                        onClick={copyAnalysis}
+                        disabled={!(originalIdea || mainSubject || summary || (keywords && keywords.length > 0))}
+                    >
                         분석 복사
-                    </button>
-                </div>
-            </S.TextGroup>
+                    </S.Button>
+                </S.ButtonGroup>
+            </S.Wrapper>
         </S.Container>
     );
 }

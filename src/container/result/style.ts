@@ -8,7 +8,6 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: repeat;
   position: relative;
-  cursor: pointer;
 
   &::after {
     content: "";
@@ -24,12 +23,21 @@ export const Container = styled.div`
   }
 `;
 
-export const TextGroup = styled.div`
+export const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 1rem;
+    justify-content: center;
     flex-direction: column;
+`;
+
+export const TextGroup = styled.div`
+    display: flex;
+    width: 60%;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
 `;
 
 export const Title = styled.div`
@@ -39,29 +47,33 @@ export const Title = styled.div`
   color: #fafafa;
 `;
 
-export const SubTitle = styled.input`
-  display: flex;
+export const SubTitle = styled.div`
   font-size: 1.5rem;
-  text-align: center;
-  width: 60rem;
-  text-shadow: 0 0 10px #008D04, 0 0 40px #008D04;
-  box-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
-  color: #9EB09E;
-  background-color: transparent;
-  border: 1px solid #008D04;
-  padding: 1.5rem;
+  color: #fafafa;
+  line-height: 1.5;
+  text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
+`;
+
+export const Value = styled.div`
+  font-size: 1.3rem;
+  color: #fafafa;
+  line-height: 1.5;
+  text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
+`;
+
+export const Button = styled.button`
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   border-radius: 4px;
-  margin-top: 6rem;
   cursor: pointer;
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+  background-color: #fafafa;
 
-  &::placeholder {
-    color: #9EB09E;
+  &:hover {
+    background-color: #d5d5d5ff;
   }
+`; 
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 20px #00FF04, 0 0 30px #00FF04;
-    border: 1px solid #00FF04;
-  }
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.75rem;
 `;
