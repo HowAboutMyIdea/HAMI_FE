@@ -1,10 +1,5 @@
 import customAxios from "@/lib/customAxios";
-
-export type ExtractedIdeaResponse = {
-    main_subject: string;
-    keywords: string[];
-    summary: string;
-};
+import { ExtractedIdeaResponse } from "@/type";
 
 export const upsertNickname = async (payload?: { nickname?: string; idea?: string }) => {
     const response = await customAxios.post("/idea", payload ?? {});

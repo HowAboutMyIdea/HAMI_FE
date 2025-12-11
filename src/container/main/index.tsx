@@ -21,6 +21,7 @@ export default function Main() {
             sessionStorage.setItem("extracted_main_subject", encodeURIComponent(data.main_subject));
             sessionStorage.setItem("extracted_keywords", encodeURIComponent(JSON.stringify(data.keywords)));
             sessionStorage.setItem("extracted_summary", encodeURIComponent(data.summary));
+            sessionStorage.setItem("extracted_feedback", encodeURIComponent(data.feedback));
             sessionStorage.setItem("original_idea", encodeURIComponent(idea));
 
             router.push("/result");

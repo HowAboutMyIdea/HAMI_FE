@@ -5,6 +5,7 @@ export function useIdeaResult() {
     const [mainSubject, setMainSubject] = useState<string | null>(null);
     const [keywords, setKeywords] = useState<string[] | null>(null);
     const [summary, setSummary] = useState<string | null>(null);
+    const [feedback, setFeedback] = useState<string | null>(null);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -27,10 +28,12 @@ export function useIdeaResult() {
         const rawMain = tryDecode(getStored("extracted_main_subject"));
         const rawKeywords = tryDecode(getStored("extracted_keywords"));
         const rawSummary = tryDecode(getStored("extracted_summary"));
+        const rawFeedback = tryDecode(getStored("extracted_feedback"));
 
         setOriginalIdea(rawIdea);
         setMainSubject(rawMain);
         setSummary(rawSummary);
+        setFeedback(rawFeedback);
 
         if (rawKeywords) {
             try {
@@ -55,5 +58,6 @@ export function useIdeaResult() {
         mainSubject,
         keywords,
         summary,
+        feedback,
     };
 }
