@@ -8,7 +8,6 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: repeat;
   position: relative;
-  cursor: pointer;
 
   &::after {
     content: "";
