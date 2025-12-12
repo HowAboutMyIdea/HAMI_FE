@@ -42,20 +42,20 @@ export const TextGroup = styled.div`
 
 export const Title = styled.div`
   display: flex;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
   color: #fafafa;
 `;
 
 export const SubTitle = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #fafafa;
   line-height: 1.5;
   text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
 `;
 
 export const Value = styled.div`
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #fafafa;
   line-height: 1.5;
 `;

@@ -35,7 +35,7 @@ export const TextGroup = styled.div`
 
 export const Title = styled.div`
   display: flex;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
   color: #fafafa;
 `;
