@@ -13,9 +13,10 @@
     "@emotion/styled": "^11.14.1",
     "axios": "^1.13.2",
     "font-kopub": "^1.0.2",
-    "next": "16.0.6",
+    "next": "16.0.7",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-server-dom-webpack": "19.0.1",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
