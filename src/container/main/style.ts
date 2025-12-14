@@ -51,6 +51,7 @@ export const SubTitle = styled.input`
   border: 1px solid #008D04;
   padding: 1.5rem;
   border-radius: 4px;
+  color: #fafafa;
   cursor: pointer;
   transition: box-shadow 0.3s ease, border 0.3s ease;
 
