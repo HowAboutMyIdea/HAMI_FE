@@ -6,12 +6,11 @@ const GlobalStyle = () => (
   <Global
     styles={css`
       @font-face {
-        font-family: 'DOSMyungjo';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102@1.1/DOSMyungjo.woff')
-          format('woff');
-        font-weight: 500;
-        font-style: normal;
-      }
+        font-family: 'DosMyungjo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+        font-weight: normal;
+        font-display: swap;
+    }
 
       *, *::before, *::after {
         margin: 0;
