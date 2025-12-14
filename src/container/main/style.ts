@@ -66,11 +66,16 @@ export const SubTitle = styled.input`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  align-items: center;
   border-radius: 4px;
   cursor: pointer;
   background-color: #fafafa;
+  border: none;
 
   &:hover {
     background-color: #d5d5d5ff;
