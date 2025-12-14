@@ -1,10 +1,9 @@
-import React from 'react';
 import type { Metadata } from 'next';
-import GlobalStyle from '@/style/GlobalStyle';
+import Providers from './providers';
 
 export const metadata: Metadata = {
   title: 'HAMI',
-  description: 'Muldum Application',
+  description: 'HAMI Application',
 };
 
 export default function RootLayout({
@@ -15,8 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <GlobalStyle />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
