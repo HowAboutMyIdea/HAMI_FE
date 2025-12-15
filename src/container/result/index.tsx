@@ -43,7 +43,7 @@ export default function Result() {
                     </S.Value>
                 </S.TextGroup>
                 <S.TextGroup>
-                    <S.SubTitle>요약</S.SubTitle>
+                    <S.SubTitle>분석결과</S.SubTitle>
                     <S.Value>{summary ?? <em>없음</em>}</S.Value>
                 </S.TextGroup>
                 <S.TextGroup>
