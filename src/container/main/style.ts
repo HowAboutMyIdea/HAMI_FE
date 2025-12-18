@@ -85,5 +85,5 @@ export const Button = styled.button`
 
 export const ButtonGroup = styled.div`
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
 `;
