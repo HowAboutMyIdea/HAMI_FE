@@ -26,7 +26,6 @@ export default function Main() {
 
             router.push("/result");
         } catch (e: any) {
-            console.error(e);
             setError(e?.message ?? "서버 호출 실패");
         } finally {
             setLoading(false);
