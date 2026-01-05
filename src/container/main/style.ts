@@ -87,3 +87,8 @@ export const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
 `;
+
+export const Error = styled.div`
+  color: red;
+  margin-top: 0.5rem;
+`;

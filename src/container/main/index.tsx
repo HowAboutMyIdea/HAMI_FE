@@ -41,7 +41,7 @@ export default function Main() {
                     onChange={(e) => setIdea(e.target.value)}
                     placeholder="아이디어를 입력하세요"
                 />
-                {error && <div style={{ color: "red", marginTop: "0.5rem" }}>{error}</div>}
+                {error && <S.Error>{error}</S.Error>}
                 <S.ButtonGroup>
                     <S.Button onClick={submit} disabled={loading} style={{ padding: "0.5rem 1rem" }}>
                         {loading ? "분석 중..." : "분석하기"}
