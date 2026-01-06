@@ -43,10 +43,10 @@ export default function Main() {
                 />
                 {error && <S.Error>{error}</S.Error>}
                 <S.ButtonGroup>
-                    <S.Button onClick={submit} disabled={loading} style={{ padding: "0.5rem 1rem" }}>
+                    <S.Button onClick={submit} disabled={loading}>
                         {loading ? "분석 중..." : "분석하기"}
                     </S.Button>
-                    <S.Button onClick={() => setIdea("")} style={{ padding: "0.5rem 1rem" }}>
+                    <S.Button onClick={() => setIdea("")}>
                         초기화
                     </S.Button>
                 </S.ButtonGroup>
