@@ -76,5 +76,5 @@ export const Button = styled.button`
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 `;
