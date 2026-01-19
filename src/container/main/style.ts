@@ -91,6 +91,6 @@ export const ButtonGroup = styled.div`
 `;
 
 export const Error = styled.div`
-  color: red;
+  color: #ff0000;
   margin-top: 0.5rem;
 `;
