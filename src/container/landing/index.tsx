@@ -10,7 +10,7 @@ export default function Landing() {
     useEffect(() => {
         const timer = setTimeout(() => {
             router.push('/main');
-        }, 3000);
+        }, 5000);
 
         return () => clearTimeout(timer);
     }, [router]);
