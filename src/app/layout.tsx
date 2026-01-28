@@ -3,7 +3,7 @@ import Providers from './providers';
 
 export const metadata: Metadata = {
   title: 'HAMI',
-  description: 'HAMI Application',
+  description: 'HAMI',
 };
 
 export default function RootLayout({
