@@ -37,6 +37,7 @@ export const Title = styled.div`
   font-size: 4rem;
   text-shadow: 0 0 10px #008D04, 0 0 20px #008D04;
   color: #fafafa;
+  margin-top: 1rem;
 `;
 
 export const SubTitle = styled.button`
