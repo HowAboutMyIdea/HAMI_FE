@@ -24,7 +24,7 @@ const GlobalStyle = () => (
       body {
         height: 100vh;
         background:
-          linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+          linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
           url("/BG.gif");
         color: #fafafa;
         background-size: cover;
