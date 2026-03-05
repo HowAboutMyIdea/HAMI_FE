@@ -11,7 +11,7 @@ export default function Result() {
     const copyAnalysis = async () => {
         const parts = [
             originalIdea ? `아이디어:\n${originalIdea}\n` : '',
-            mainSubject ? `핵심 주제: ${mainSubject}\n` : '',
+            mainSubject ? `주제: ${mainSubject}\n` : '',
             keywords ? `키워드: ${keywords.join(', ')}\n` : '',
             summary ? `요약:\n${summary}\n` : '',
             feedback ? `피드백:\n${feedback}\n` : ''
